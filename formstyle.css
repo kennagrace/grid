@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    background-color: #f0e9df;
+  }
+
+  nav ul{
+    list-style-type: none;
+  }
+
+  a{
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+  }
+
+  a:visited{
+    text-decoration: none;
+    color: black;
+  }
+
+  h1{
+      color:#507882;
+      font-family: 'Euphoria Script', cursive;
+  }
+  
+  section {
+    margin: 0 1rem;
+    max-width: 30rem;
+    align-self: center;
+  }
+  
+  form {
+    display: grid;
+  }
+  
+  fieldset {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.8rem;
+  
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  legend {
+    grid-column: 1 / span 2;
+    margin-bottom: 1rem;
+  }
+  
+
+  form > input,
+  textarea,
+  fieldset,
+  button {
+    margin-bottom: 1.5rem;
+  }
+  
+  button {
+    justify-self: center;
+    border: 1px solid #507882;
+    color: black;
+    background-color: #e1eff0;
+    padding: 8px 15px;
+    font-size: 20px; 
+    border-radius: 10px;
+    transition: background-color 300ms;
+
+  }
+  
+  button:hover {
+    background-color: #507882;
+    color: #fff;
+  }
+  
+  input:hover,
+  input:focus {
+    background-color: lightyellow;
+  }
+  
+  input:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 2px #e1eff0;
+    outline: 1px #e1eff0;
+  }
+  
+  @media (min-width: 500px) {
+
+    section {
+      max-width: 40rem;
+      align-self: center;
+    }
+    form {
+      grid-template-columns: max-content 1fr;
+      grid-column-gap: 0.5rem;
+  
+      align-items: center;
+    }
+    
+    form > input {
+      margin: .5rem 0;
+    }
+  
+    form > label {
+      justify-self: end;
+    }
+  
+    label[for="comment"] {
+      justify-self: start;
+    }
+  
+    fieldset,
+    label[for="comment"],
+    textarea,
+    button {
+      grid-column-start: 2;
+    }
+  
+    button {
+      justify-self: start;
+    }
+  }
+  img{
+    display: block;
+    width: 100%;
+    height: 40px;
+  }
+   
+  @media (min-width: 700px) {
+    .form section {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  
+    .form section img {
+      flex: 0 1 30%;
+    }
+  
+    .form section form {
+      flex: 1 1 70%;
+    }
+  
+    .form section img {
+      align-self: flex-start;
+    }
+  }
+  
